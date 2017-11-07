@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>RompeCabezas VS. Robot</title>
+    <link rel="stylesheet" href="css/juego.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
+  </head>
+  <body>
+    <div class="col-40">
+      <div id="tituloRompecabezas">
+        <h1>Rompecabezas</h1>
+      </div>
+      <div id="tituloRobot">
+        <h1>Robot</h1>
+      </div>
+      <div id="instrucciones">
+        <h2>Instrucciones para Ganarle al Robot</h2>
+        <ul>
+          <li>Mover las piezas presionando las teclas de flechas.</li>
+          <li>Tenes que <strong>mezclar</strong> las fichas, tenés 25 movimientos</li>
+          <li>Si el Robot lo resuelve en 25 movimientos o más <strong>¡ganaste!</strong></li>
+        </ul>
+      </div>
+      <div id="resultado">👨 0 / <strong>0</strong> 🤖</div>
+      <div id="mezclar"><span id="mezclarBoton">Mezclar Piezas</span> <input id="cantPiezasMezclar" type="number" max="25" onkeydown="return false" value="0"></input></div>
+    </div>
+
+    <div class="col-60">
+      <div id="backjuego">
+      <div id="juego">
+        <div class="pieza" id="pieza1"></div>
+        <div class="pieza" id="pieza2"></div>
+        <div class="pieza" id="pieza3"></div>
+        <div class="pieza" id="pieza4"></div>
+        <div class="pieza" id="pieza5"></div>
+        <div class="pieza" id="pieza6"></div>
+        <div class="pieza" id="pieza7"></div>
+        <div class="pieza" id="pieza8"></div>
+        <div id="pieza9"></div>
+      </div>
+      </div>
+    </div>
+
+    <div id="aportesOculto" class="mensajeEmergente">
+      <img src="images/introRobot.png" alt="">
+      <h2>¡Te toca mezclar!</h2>
+      <p>Para <strong>ganar el juego</strong> debes vencer al Robot. Para hacerlo debes mezclar el RompeCabezas, moviéndolo hasta 25 veces. Luego el Robot intentará resolverlo, y si lo hace en 25 movimientos o más <strong>ganaste!</strong></p>
+      <p>¡Puedes intentar ganarle las veces que quieras!</p>
+      <a data-fancybox-close><h2>Jugar</h2></a>
+    </div>
+
+    <div id="perdiste" class="mensajeEmergente">
+      <h2><strong>¡Perdiste!</strong></h2>
+      <p>El Robot ha ganado ya que utilizó menos movimientos para resolver el RompeCabezas</p>
+      <p>No desanimes, ¡puedes intentarlo tantas veces como quieras!</p>
+      <a data-fancybox-close><h2>Intentar nuevamente</h2></a>
+    </div>
+
+    <div id="ganaste" class="mensajeEmergente">
+      <img src="images/chuckNorrisApproved.gif" alt="">
+      <h2><strong>¡Ganaste!</strong></h2>
+      <p>Has demostrado ser lo suficientemente inteligente para encontrar una táctica para ganar, o bien has logrado volver loco al Robot.<p></p>
+      <a data-fancybox-close><h2>Intentar nuevamente</h2></a>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/juego.js"></script>
+  </body>
+</html>
