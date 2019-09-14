@@ -267,3 +267,5 @@ $('#mezclarBoton').click(function() {
   var cuantoMezclo = $('#cantPiezasMezclar').val();
   mezclarPiezas(cuantoMezclo);
 });
+
+console.log(actualizarContador());
